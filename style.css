@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Animated background stars */
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 3s infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 2rem;
+    animation: slideDown 0.8s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.title-67 {
+    font-size: 10rem;
+    font-weight: bold;
+    margin: 0;
+    background: linear-gradient(45deg, #ff6b6b, #ffd93d, #6bcf7f, #4d96ff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease infinite;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-style: italic;
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Floating 67 */
+.floating-67 {
+    position: fixed;
+    font-size: 8rem;
+    opacity: 0.1;
+    pointer-events: none;
+    animation: float 6s ease-in-out infinite;
+    font-weight: bold;
+    color: white;
+}
+
+.floating-67:nth-child(1) {
+    left: 5%;
+    top: 20%;
+    animation-delay: 0s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-50px) rotate(10deg); }
+}
+
+.spinning-67 {
+    position: fixed;
+    font-size: 6rem;
+    opacity: 0.08;
+    pointer-events: none;
+    animation: spin 10s linear infinite;
+    font-weight: bold;
+    color: white;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@keyframes spin {
+    0% { transform: translateY(-50%) rotate(0deg); }
+    100% { transform: translateY(-50%) rotate(360deg); }
+}
+
+.bouncing-67 {
+    position: fixed;
+    font-size: 5rem;
+    opacity: 0.08;
+    pointer-events: none;
+    animation: bounce 2s ease-in-out infinite;
+    font-weight: bold;
+    color: white;
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-50px); }
+}
+
+/* Content */
+.content {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 3rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    margin: 3rem 0;
+    text-align: center;
+    animation: slideIn 0.8s ease-out 0.2s both;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #ffd93d, #ff6b6b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.content p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+
+/* Grid of 67s */
+.grid-67 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin: 3rem 0;
+}
+
+.box {
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.8), rgba(255, 217, 61, 0.8));
+    padding: 2rem;
+    border-radius: 15px;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: popIn 0.5s ease-out backwards;
+}
+
+.box:nth-child(1) { animation-delay: 0s; }
+.box:nth-child(2) { animation-delay: 0.1s; }
+.box:nth-child(3) { animation-delay: 0.2s; }
+.box:nth-child(4) { animation-delay: 0.3s; }
+.box:nth-child(5) { animation-delay: 0.4s; }
+.box:nth-child(6) { animation-delay: 0.5s; }
+.box:nth-child(7) { animation-delay: 0.6s; }
+.box:nth-child(8) { animation-delay: 0.7s; }
+.box:nth-child(9) { animation-delay: 0.8s; }
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0);
+        rotate: -180deg;
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+        rotate: 0deg;
+    }
+}
+
+.box:hover {
+    transform: scale(1.15) rotate(10deg);
+    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.5);
+}
+
+/* Quotes */
+.quotes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.quote-box {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 2rem;
+    border-radius: 15px;
+    border-left: 5px solid #ffd93d;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.8s ease-out backwards;
+}
+
+.quote-box:nth-child(1) { animation-delay: 0.2s; }
+.quote-box:nth-child(2) { animation-delay: 0.4s; }
+
+.quote-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.quote-box p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+    margin-top: 3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .title-67 {
+        font-size: 5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .content {
+        padding: 1.5rem;
+    }
+
+    .content h2 {
+        font-size: 1.5rem;
+    }
+
+    .grid-67 {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 1rem;
+    }
+
+    .box {
+        font-size: 2rem;
+        padding: 1rem;
+    }
+}
